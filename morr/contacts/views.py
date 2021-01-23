@@ -7,3 +7,9 @@ from .serializers import ContactSerializer
 class ContactListAPIView(generics.ListAPIView):
     queryset = ContactsModel.objects.all()
     serializer_class = ContactSerializer
+
+
+class ContactDetailAPIView(generics.RetrieveAPIView):
+    queryset = ContactsModel.objects.all()
+    serializer_class = ContactSerializer
+    lookup_field = "_id"
