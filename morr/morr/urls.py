@@ -22,4 +22,5 @@ urlpatterns = [
     path('api_get/', views.ContactListAPIView.as_view()),
     path('api_get/<int:_id>', views.ContactDetailAPIView.as_view()),
     path('api_add/', views.AddContactAPIView.as_view()),
+    path('api_delete/<int:_id>', views.DeleteContactAPIView.as_view())
 ]
