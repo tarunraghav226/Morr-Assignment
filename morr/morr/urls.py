@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from contacts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api_get/', views.ContactListAPIView.as_view())
 ]
