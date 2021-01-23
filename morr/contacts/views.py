@@ -7,6 +7,7 @@ from .serializers import ContactSerializer
 class ContactListAPIView(generics.ListAPIView):
     queryset = ContactsModel.objects.all()
     serializer_class = ContactSerializer
+    pagination_class = None
 
 
 class ContactDetailAPIView(generics.RetrieveAPIView):
