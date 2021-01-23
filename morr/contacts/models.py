@@ -7,4 +7,4 @@ class ContactsModel(models.Model):
     email_id = models.CharField(unique=True, max_length=30)
 
     def __str__(self):
-        return self._id + " " + self.name + " " + self.email_id
+        return str(self._id) + " " + self.name + " " + self.email_id
