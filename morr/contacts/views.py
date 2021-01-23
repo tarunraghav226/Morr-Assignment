@@ -23,3 +23,9 @@ class DeleteContactAPIView(generics.DestroyAPIView):
     queryset = ContactsModel.objects.all()
     serializer_class = ContactSerializer
     lookup_field = "_id"
+
+
+class UpdateContactAPIView(generics.UpdateAPIView):
+    queryset = ContactsModel.objects.all()
+    serializer_class = ContactSerializer
+    lookup_field = "_id"
