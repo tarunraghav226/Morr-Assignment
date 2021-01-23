@@ -19,5 +19,6 @@ from contacts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api_get/', views.ContactListAPIView.as_view())
+    path('api_get/', views.ContactListAPIView.as_view()),
+    path('api_get/<int:_id>', views.ContactDetailAPIView.as_view()),
 ]
